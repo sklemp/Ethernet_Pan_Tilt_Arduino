@@ -5,7 +5,6 @@
 #include <SPI.h>
 #include <Client.h>
 #include <Ethernet.h>
-#include <Server.h>
 #include <Udp.h>
 #include <Servo.h>
 Servo tilt;
