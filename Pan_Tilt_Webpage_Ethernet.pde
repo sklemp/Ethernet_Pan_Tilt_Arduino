@@ -16,7 +16,7 @@ byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED }; //physical mac address
 byte ip[] = { 10, 0, 0, 9 };           // ip in lan
 byte gateway[] = { 192, 168, 0, 1 };            // internet access via router
 byte subnet[] = { 255, 255, 255, 0 };                   //subnet mask
-Server server(80);                                      //server port
+EthernetServer server(80);                                      //server port
 String readString = String(30); //string for fetching data from address
 void setup(){
   Ethernet.begin(mac, ip, gateway, subnet);
@@ -28,7 +28,7 @@ void setup(){
 }
 void loop(){
 // Create a client connection
-Client client = server.available();
+EthernetClient client = server.available();
   if (client) {
     while (client.connected()) {
    if (client.available()) {
